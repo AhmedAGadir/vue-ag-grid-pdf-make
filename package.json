@@ -1,0 +1,14 @@
+{
+  "name": "ag-grid-vue-hello-world",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@simonwep/pickr": "^1.8.0",
+    "ag-grid-community": "25.1.0",
+    "ag-grid-enterprise": "25.1.0",
+    "ag-grid-vue": "25.1.0",
+    "pdfmake": "0.1.70",
+    "vue": "2.6.10",
+    "vue-property-decorator": "7.3.0"
+  }
+}
