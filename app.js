@@ -31,7 +31,6 @@ export const App = {
       columnDefs: COLDEFS_WITHOUT_GROUPING,
       suppressPropertyNamesCheck: true,
       defaultColDef: {
-        cellRendererFramework: "MyCellRenderer",
         filter: true,
         sortable: true,
         resizable: true,

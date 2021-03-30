@@ -11,6 +11,8 @@ const COL_SELECTION = {
 const COL_ATHLETE = {
   headerName: "Athlete",
   field: "athlete",
+  colId: "athlete",
+  cellRendererFramework: "MyCellRenderer",
   width: 100,
   pdfExportOptions: {
     createURL: value => {
@@ -24,6 +26,8 @@ const COL_ATHLETE = {
 const COL_COUNTRY = {
   headerName: "Country",
   field: "country",
+  colId: "country",
+  cellRendererFramework: "MyCellRenderer",
   pdfExportOptions: {
     styles: {
       background: "lightseagreen",
@@ -36,6 +40,8 @@ const COL_COUNTRY = {
 const COL_AGE = {
   headerName: "Age (Not Exported)",
   field: "age",
+  colId: "age",
+  cellRendererFramework: "MyCellRenderer",
   minWidth: 60,
   pdfExportOptions: {
     skipColumn: true
@@ -44,6 +50,7 @@ const COL_AGE = {
 const COL_DATE = {
   headerName: "Date",
   colId: "date",
+  cellRendererFramework: "MyCellRenderer",
   valueGetter: params => {
     if (params.node.group) {
       return null;
@@ -55,10 +62,33 @@ const COL_DATE = {
     return mm + "/" + dd + "/" + yyyy;
   }
 };
-const COL_SPORT = { headerName: "Sport", field: "sport" };
-const COL_GOLD = { headerName: "Gold", field: "gold", aggFunc: "sum" };
-const COL_SILVER = { headerName: "Silver", field: "silver", aggFunc: "sum" };
-const COL_BRONZE = { headerName: "Bronze", field: "bronze", aggFunc: "sum" };
+const COL_SPORT = {
+  headerName: "Sport",
+  field: "sport",
+  colId: "sport",
+  cellRendererFramework: "MyCellRenderer"
+};
+const COL_GOLD = {
+  headerName: "Gold",
+  field: "gold",
+  colId: "gold",
+  aggFunc: "sum",
+  cellRendererFramework: "MyCellRenderer"
+};
+const COL_SILVER = {
+  headerName: "Silver",
+  field: "silver",
+  colId: "silver",
+  aggFunc: "sum",
+  cellRendererFramework: "MyCellRenderer"
+};
+const COL_BRONZE = {
+  headerName: "Bronze",
+  field: "bronze",
+  colId: "bronze",
+  aggFunc: "sum",
+  cellRendererFramework: "MyCellRenderer"
+};
 
 export const COLDEFS_WITH_GROUPING = [
   COL_SELECTION,

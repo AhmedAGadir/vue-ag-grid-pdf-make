@@ -13,10 +13,8 @@ const GridOptionsPanel = {
   },
   methods: {
     updateColumnGrouping(event) {
-      const withColumnGroups = event.target.checked;
-
       this.agGridApi.setColumnDefs(
-        withColumnGroups ? COLDEFS_WITH_GROUPING : COLDEFS_WITHOUT_GROUPING
+        event.target.checked ? COLDEFS_WITH_GROUPING : COLDEFS_WITHOUT_GROUPING
       );
     },
     updateGroupByCountry(event) {
@@ -26,10 +24,7 @@ const GridOptionsPanel = {
             colId: "country",
             rowGroup: event.target.checked
           }
-        ],
-        defaultState: {
-          rowGroup: false
-        }
+        ]
       });
     },
     updateFilterByArgentina(event) {
